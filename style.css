@@ -4,5 +4,25 @@ p {
 	line-height: 1.6;
 }
 
+header {
+	width:100%;
+	text-align:center;
+	position:fixed;
+	top:0;
+	font-size:5vh;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header img {
+	height:10vh;
+	margin:0 3vw 0 3vw;
+}
+
+article {
+	margin-top:10vh;
+}
+
 @media (min-width: 800px){
 }
