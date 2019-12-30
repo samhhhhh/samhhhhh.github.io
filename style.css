@@ -1,7 +1,13 @@
 @charset "utf-8";
 
+/*
+font-family: 'Nanum Gothic Coding', monospace;
+font-family: 'Ibarra Real Nova', serif;
+*/
+
 p {
 	line-height: 1.6;
+	font-family: 'Nanum Gothic Coding', monospace;
 }
 
 header {
@@ -10,18 +16,21 @@ header {
 	position:fixed;
 	top:0;
 	font-size:5vh;
+	font-family: 'Ibarra Real Nova', serif;
 	display:flex;
 	justify-content: center;
 	align-items: center;
+	background-color: white;
 }
 
 header img {
-	height:10vh;
+	height:6vh;
 	margin:0 3vw 0 3vw;
 }
 
 article {
-	margin-top:10vh;
+	margin-top:6vh;
+	padding: 0 2vw 0 2vw;
 }
 
 @media (min-width: 800px){
