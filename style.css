@@ -9,6 +9,7 @@ header {
 	overflow: hidden;
 	background-image: url("https://wallpaperstock.net/wallpapers/thumbs1/49581wide.jpg");
 	background-attachment: fixed;
+	background-size: 100% 100%;
 	color: white;
 	display: flex;
 	justify-content: center;
@@ -20,4 +21,7 @@ header {
 }
 
 @media (min-width: 800px){
+	header {
+		font-size: 4rem;
+	}
 }
