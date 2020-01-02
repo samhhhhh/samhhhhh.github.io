@@ -1,36 +1,22 @@
 @charset "utf-8";
 
-/*
-font-family: 'Nanum Gothic Coding', monospace;
-font-family: 'Ibarra Real Nova', serif;
-*/
-
-p {
-	line-height: 1.6;
-	font-family: 'Nanum Gothic Coding', monospace;
-}
-
 header {
-	width:100%;
-	text-align:center;
-	position:fixed;
-	top:0;
-	font-size:5vh;
-	font-family: 'Ibarra Real Nova', serif;
-	display:flex;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 60vh;
+	overflow: hidden;
+	background-image: url("https://wallpaperstock.net/wallpapers/thumbs1/49581wide.jpg");
+	background-attachment: fixed;
+	color: white;
+	display: flex;
 	justify-content: center;
-	align-items: center;
-	background-color: white;
-}
-
-header img {
-	height:6vh;
-	margin:0 3vw 0 3vw;
-}
-
-article {
-	margin-top:6vh;
-	padding: 0 2vw 0 2vw;
+	align-items: flex-end;
+	font-size: 1.5rem;
+	font-variant: small-caps;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	text-shadow: 1px 1px, 2px 2px 1px lightgrey, 3px 2px 2px grey;
 }
 
 @media (min-width: 800px){
