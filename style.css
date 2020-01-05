@@ -24,4 +24,9 @@ header {
 	header {
 		font-size: 4rem;
 	}
+	
+	p {
+		padding: 0 25vw 1rem 25vw;
+		margin: 0;
+	}
 }
