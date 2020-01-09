@@ -1,32 +1,74 @@
 @charset "utf-8";
 
+img {
+	width: 100%;
+}
+
+p {
+	line-height: 1.5rem;
+	text-indent: 3rem;
+	margin: 0 0 .75rem 0;
+	padding: 0;
+}
+
+section {
+	margin-top: 15vh;
+}
+
 header {
+	color: antiquewhite;
 	position: absolute;
 	left: 0;
-	top: 0;
 	right: 0;
-	bottom: 60vh;
-	overflow: hidden;
-	background-image: url("https://wallpaperstock.net/wallpapers/thumbs1/49581wide.jpg");
-	background-attachment: fixed;
-	background-size: 100% 100%;
-	color: white;
+	top: 0;
+	bottom: 84vh;
 	display: flex;
 	justify-content: center;
-	align-items: flex-end;
-	font-size: 1.5rem;
+	align-items: center;
+	font-size: 2rem;
 	font-variant: small-caps;
-	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-	text-shadow: 1px 1px, 2px 2px 1px lightgrey, 3px 2px 2px grey;
+	letter-spacing: .25rem;
+	font-style: italic;
+	font-family: sans-serif;
+	background-image: url("https://picsum.photos/1000");
+	background-size: 100%;
+	background-attachment: fixed;
+	text-shadow: 1px 0 white,
+		2px 0 lightgrey,
+		3px 1px 1px cyan;
 }
 
 @media (min-width: 800px){
-	header {
-		font-size: 4rem;
+	section {
+		margin-top: 32vh;
+		display: grid;
+		grid-template-columns: 50vw 30vw;
+		justify-content: center;
+		grid-gap: 2vw;
 	}
 	
-	p {
-		padding: 0 25vw 1rem 25vw;
-		margin: 0;
+	article {
+		background-color: antiquewhite;
+		padding: 2vh;
+		border-radius: 5%;
+		border: 5px solid cyan;
+	}
+	
+	header {
+		bottom: 70vh;
+		font-size: 3rem;
+	}
+	
+	aside {
+		display: flex;
+		flex-flow: row wrap;
+		align-content: flex-start;
+	}
+	
+	img {
+		width: 9vw;
+		height: 9vw;
+		margin: 0 1vw 1vw 0;
+		border-radius: 10%;
 	}
 }
