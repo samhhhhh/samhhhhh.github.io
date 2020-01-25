@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+@media (min-width: 800px){
+	body {
+		display: grid;
+		grid-template-columns: 50vw;
+		justify-content: center;
+	}
+	article {
+		border: 1px solid lightgrey;
+		border-radius: 5%;
+		padding: 1rem 2rem 0 2rem;
+	}
+	
+	p {
+		color: grey;
+		margin: 0 0 1rem 0;
+		line-height: 1.5rem;
+	}
+	
+	img {
+		width: 100%;
+		filter: grayscale(100%);
+	}
+}
