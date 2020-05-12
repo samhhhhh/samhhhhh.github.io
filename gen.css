@@ -1,0 +1,32 @@
+/* hello */
+
+header {
+  position:fixed;
+  bottom:0;
+  right:0;
+  font-family: sans-serif;
+}
+
+.pre {
+  font-size: 5rem;
+}
+
+.post {
+  font-size: 3rem;
+  font-variant: small-caps;
+}
+
+#notes {
+  font-size: 6rem;
+  font-family: monospace;
+  position:absolute;
+  top:0;
+  left:40vw;
+}
+
+#params {
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-variant: small-caps;
+  font-style: italic;
+}
