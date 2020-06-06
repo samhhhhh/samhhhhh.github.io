@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="theme-color" content="black">
+	<title>Untitled Document</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="Untitled-1.png">
+</head>
+<body>
+	<header>Page Title</header>
+	<section>
+		<article id="thenews"></article>
+		<aside>
+			<img src="https://picsum.photos/1000">
+			<img src="https://picsum.photos/1000">
+			<img src="https://picsum.photos/1000">
+			<img src="https://picsum.photos/1000">
+			<img src="https://picsum.photos/1000">
+			<img src="https://picsum.photos/1000">
+			<img src="https://picsum.photos/1000">
+			<img src="https://picsum.photos/1000">
+			<img src="https://picsum.photos/1000">
+		</aside>
+	</section>
+
+	<script>
+	function loadDoc() {
+		var output;
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				output = JSON.parse(this.responseText);
+				for (x in output.results) {
+					document.getElementById('thenews').innerHTML += '<div id="' + x + '">';
+					document.getElementById(x).innerHTML += '<p>' + output.results[x].title + '</p>';
+					document.getElementById(x).innerHTML += '<p>' + output.results[x].abstract + '</p>';
+				}
+			}
+		};
+		xhttp.open("GET", "https://api.nytimes.com/svc/topstories/v2/home.json?api-key=w4TVZX3ErEvfuMKAHO469G8ERjMwC8vg", true);
+		xhttp.send();
+	}
+</script>
+
+</body>
+</html>
