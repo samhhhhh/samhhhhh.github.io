@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>box</title>
+  <script language="javascript">
+
+    function theBox() {
+      alert("box!\nbox!\nbox!\nbox!\nbox!");
+    }
+
+  </script>
+  <style type="text/css">
+    #thebox {
+      background-color:blue;
+      width:20vw;
+      height:20vw;
+      border:1vw groove lightblue;
+      box-shadow:2px 2px green,
+                  3px 3px lightgreen,
+                  4px 4px 2px purple,
+                  5px 5px 4px black;
+    }
+    #otherbox {
+      background-color:grey;
+      width:12vw;
+      height:12vw;
+      border:.5vw groove brown;
+      box-shadow:2px 2px green,
+                  3px 3px lightgreen,
+                  4px 4px 2px purple,
+                  5px 5px 4px black;
+    }
+    #biggerbox {
+      position:absolute;
+      top:0;
+      bottom:10vh;
+      left:8vw;
+      right:13vw;
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+    }
+  </style>
+</head>
+<body><div id="biggerbox"
+  <a onclick="theBox()"><div id="thebox"></div></a>
+  <p>two box</p>
+  <a onclick="theBox()"><div id="otherbox"></div></a></div>
+</body>
+</html>
