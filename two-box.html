@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+  <title>two box</title>
+  <script language="javascript">
+  var whichBox = Math.round(Math.random());
+  var theScore = 0;
+  var negscore = 0;
+  function boxGame(boxname) {
+    if (negscore == 0 && theScore >= 5) {
+      negscore = 1;
+    } else if (theScore == 20) {
+      document.getElementById('goodbox').style.animation = 'victorygood 3s 1';
+      document.getElementById('badbox').style.animation = 'victorybad 3s 1';
+      document.getElementById('wow').style.display = 'block';
+    }
+    if (whichBox == boxname) {
+      theScore = theScore + 1;
+      document.getElementById('goodbox').style.left = Math.round(Math.random() * 600) + 'px';
+      document.getElementById('goodbox').style.top = Math.round(Math.random() * 400) + 'px';
+      document.getElementById('badbox').style.left = Math.round(Math.random() * 600) + 'px';
+      document.getElementById('badbox').style.top = Math.round(Math.random() * 400) + 'px';
+      document.getElementById('score').innerHTML = 'score: ' + theScore;
+      document.getElementById('quality').innerHTML = 'good box!';
+    } else {
+      if (negscore == 1) {
+        theScore = theScore - 1;
+      }
+      document.getElementById('goodbox').style.left = Math.round(Math.random() * 600) + 'px';
+      document.getElementById('goodbox').style.top = Math.round(Math.random() * 400) + 'px';
+      document.getElementById('badbox').style.left = Math.round(Math.random() * 600) + 'px';
+      document.getElementById('badbox').style.top = Math.round(Math.random() * 400) + 'px';
+      document.getElementById('score').innerHTML = 'score: ' + theScore;
+      document.getElementById('quality').innerHTML = 'bad box!';
+    }
+    whichBox = Math.round(Math.random());
+  }
+  </script>
+  <style type="text/css">
+  #goodbox {
+    margin: 0 0 0 0;
+    position:absolute;
+    left:0;
+    top:0;
+    min-width: 200px;
+    min-height: 200px;
+    background-color: blue;
+  }
+  #badbox {
+    position:absolute;
+    left:200px;
+    top:0;
+    min-width: 200px;
+    min-height: 200px;
+    background-color: brown;
+  }
+  #score {
+    position:absolute;
+    bottom:10px;
+    right:10px;
+    font-family: monospace;
+    font-size: 4rem;
+  }
+  #quality {
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    font-family: monospace;
+    font-size: 4rem;
+    animation: qualityflash 2s infinite;
+  }
+  #wow {
+    display:none;
+    position:absolute;
+    left:500px;
+    top:500px;
+    font-family: monospace;
+    font-size:4rem;
+  }
+  @keyframes qualityflash {
+    0% {color:white;}
+    50% {color:black;}
+    100% {color:white;}
+  }
+  @keyframes victorygood {
+    0% {top:0;left:0;}
+    10% {top:30px;left:500px;}
+    25% {top:60px;left:30px;}
+    45% {top:100px;left:300px;}
+    70% {top:300px;left:100px;}
+    100% {top:500px;left:200px;}
+  }
+  @keyframes victorybad {
+    0% {top:0;left:500px;}
+    10% {top:30px;left:0;}
+    25% {top:60px;left:300px;}
+    45% {top:100px;left:30px;}
+    70% {top:300px;left:200px;}
+    100% {top:500px;left:100px;}
+  }
+  </style>
+</head>
+<body>
+  <div id="goodbox" onclick="boxGame(0)"></div>
+  <div id="badbox" onClick="boxGame(1)"></div>
+  <div id="score">score: 0</div>
+  <div id="quality"></div>
+  <div id="wow">you win!</div>
+</body>
+</html>
