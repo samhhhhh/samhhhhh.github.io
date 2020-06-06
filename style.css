@@ -9,6 +9,9 @@ p {
 	text-indent: 3rem;
 	margin: 0 0 .75rem 0;
 	padding: 0;
+	font-size:1.5rem;
+	font-family:cursive;
+	color:blue;
 }
 
 section {
@@ -46,25 +49,25 @@ header {
 		justify-content: center;
 		grid-gap: 2vw;
 	}
-	
+
 	article {
 		background-color: antiquewhite;
 		padding: 2vh;
-		border-radius: 5%;
+		border-radius: 20px;
 		border: 5px solid cyan;
 	}
-	
+
 	header {
 		bottom: 70vh;
 		font-size: 3rem;
 	}
-	
+
 	aside {
 		display: flex;
 		flex-flow: row wrap;
 		align-content: flex-start;
 	}
-	
+
 	img {
 		width: 9vw;
 		height: 9vw;
