@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <title>Two Box</title>
+  <style type="text/css">
+    #desc {
+      font-family:monospace;
+      font-size:4rem;
+    }
+    section {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      position:absolute;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+    }
+  </style>
+  <script language="javascript">
+    var text = ['welcome to two box,', 'can you tell the good from the bad?', 'it\'s time to find out:', 'click the boxes to see']
+    function myIntro() {
+      for (x in text) {
+        myAdvance(text[x], x);
+      }
+      window.setTimeout(function() { window.location.replace('two-box.html'); }, 4 * 3000);
+    }
+    function myAdvance(text, x) {
+      window.setTimeout(function() { document.getElementById('desc').innerHTML = text; }, x * 3000);
+    }
+  </script>
+</head>
+<body onload="myIntro()">
+  <section><div id="desc">hello</div></section>
+</body>
+</html>
